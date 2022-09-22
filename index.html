@@ -1,4 +1,44 @@
-<a href='javascript: (function () {
+<html>
+
+<head>
+  <title>Watch invidious from youtube</title>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji
+    }
+
+    .btn {
+      background: #3498db;
+      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+      background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+      background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+      background-image: -o-linear-gradient(top, #3498db, #2980b9);
+      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+      -webkit-border-radius: 60;
+      -moz-border-radius: 60;
+      border-radius: 60px;
+      text-shadow: 2px 1px 4px #666666;
+      color: #ffffff;
+      font-size: 30px;
+      padding: 22px 40px 22px 40px;
+      text-decoration: none;
+      margin: 50px auto;
+      display: inline-block;
+    }
+
+    textarea {
+      padding: 10px;
+      width: 100%;
+      height: 20em;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1>Drag & Drop the link to your bookmark</h1>
+    <a class=btn href='javascript: (function () {
   document.querySelectorAll("#preview").forEach((e) => e.remove());
   document.querySelectorAll("#thumbnail").forEach((e) => {
     c = document.createElement("a");
@@ -13,7 +53,18 @@
     e.parentNode.prepend(c);
   });
   })();'>Go Invidious</a>
+  </center>
 
-  Drag the link and drop it into your bookmarks.
+  <h2>Opinionated invidious settings</h2>
+  <ol>
+    <li>Install <a
+        href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg">EditThisCookie</a>
+    </li>
+    <li>On an Invidious instance change any setting (to create a cookie)</li>
+    <li>copy &amp; paste the following inside the EditThisCookie</li>
+  </ol>
+  <textarea>%7B%22annotations%22%3Afalse%2C%22annotations_subscribed%22%3Afalse%2C%22autoplay%22%3Atrue%2C%22automatic_instance_redirect%22%3Afalse%2C%22captions%22%3A%5B%22%22%2C%22%22%2C%22%22%5D%2C%22comments%22%3A%5B%22%22%2C%22%22%5D%2C%22continue%22%3Atrue%2C%22continue_autoplay%22%3Atrue%2C%22dark_mode%22%3A%22%22%2C%22latest_only%22%3Afalse%2C%22listen%22%3Afalse%2C%22local%22%3Afalse%2C%22watch_history%22%3Afalse%2C%22vr_mode%22%3Atrue%2C%22show_nick%22%3Afalse%2C%22locale%22%3A%22en-US%22%2C%22region%22%3A%22US%22%2C%22max_results%22%3A40%2C%22notifications_only%22%3Afalse%2C%22player_style%22%3A%22youtube%22%2C%22quality%22%3A%22medium%22%2C%22quality_dash%22%3A%22360p%22%2C%22default_home%22%3A%22Popular%22%2C%22feed_menu%22%3A%5B%22Popular%22%2C%22Trending%22%5D%2C%22related_videos%22%3Atrue%2C%22sort%22%3A%22published%22%2C%22speed%22%3A1.5%2C%22thin_mode%22%3Afalse%2C%22unseen_only%22%3Afalse%2C%22video_loop%22%3Afalse%2C%22extend_desc%22%3Atrue%2C%22volume%22%3A100%2C%22save_player_pos%22%3Afalse%7D</textarea>
 
-Then just use it when on Youtube
+</body>
+
+</html>
